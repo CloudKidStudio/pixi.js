@@ -54,9 +54,7 @@ function BlurDirFilter(dirX, dirY)
     this.strength = 4;
 }
 
-BlurDirFilter.prototype = Object.create(core.AbstractFilter.prototype);
-BlurDirFilter.prototype.constructor = BlurDirFilter;
-module.exports = BlurDirFilter;
+module.exports = core.utils.extend(BlurDirFilter, core.AbstractFilter);
 
 BlurDirFilter.prototype.applyFilter = function (renderer, input, output, clear) {
 

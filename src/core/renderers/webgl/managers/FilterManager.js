@@ -2,6 +2,7 @@ var WebGLManager = require('./WebGLManager'),
     RenderTarget = require('../utils/RenderTarget'),
     CONST = require('../../../const'),
     Quad = require('../utils/Quad'),
+    utils = require('../../../utils'),
     math =  require('../../../math');
 
 /**
@@ -48,9 +49,7 @@ function FilterManager(renderer)
     this.currentFrame = null;
 }
 
-FilterManager.prototype = Object.create(WebGLManager.prototype);
-FilterManager.prototype.constructor = FilterManager;
-module.exports = FilterManager;
+module.exports = utils.extend(FilterManager, WebGLManager);
 
 
 /**

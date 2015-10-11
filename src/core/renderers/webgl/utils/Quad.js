@@ -1,3 +1,5 @@
+var construct = require('../../../utils').construct;
+
 /**
  * Helper class to create a quad
  *
@@ -80,8 +82,6 @@ function Quad(gl)
     this.upload();
 }
 
-Quad.prototype.constructor = Quad;
-
 /**
  * Maps two Rectangle to the quad
  * @param rect {PIXI.Rectangle} the first rectangle
@@ -148,6 +148,4 @@ Quad.prototype.destroy = function()
      gl.deleteBuffer(this.indexBuffer);
 };
 
-module.exports = Quad;
-
-
+module.exports = construct(Quad);

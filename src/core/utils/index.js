@@ -12,6 +12,39 @@ var utils = module.exports = {
     async:          require('async'),
 
     /**
+     * Extend from one class to another
+     *
+     * @param child {function} child The child class
+     * @param parent {function} parent The parent class to extend
+     * @param isPluginTarget=false {Boolean} If the child can have plugins
+     * @return {function} The child class
+     */
+    extend: function(child, parent, isPluginTarget)
+    {
+        var p = parent.prototype;
+        child.prototype = Object.create(p);
+        child.prototype.__parent = p;
+
+        if (isPluginTarget)
+        {
+            utils.pluginTarget.mixin(child);
+        }
+        return utils.construct(child);
+    },
+
+    /**
+     * This helper function to add constructor method on the prototype.
+     *
+     * @param child {function} The child class to add constructor for
+     * @return {function} Returns the child class
+     */
+    construct: function(child)
+    {
+        child.prototype.constructor = child;
+        return child;
+    },
+
+    /**
      * Gets the next unique identifier
      *
      * @return {number} The next unique identifier to use.

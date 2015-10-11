@@ -59,11 +59,8 @@ function Rope(texture, points)
      this.refresh();
 }
 
-
 // constructor
-Rope.prototype = Object.create(Mesh.prototype);
-Rope.prototype.constructor = Rope;
-module.exports = Rope;
+module.exports = core.utils.extend(Rope, Mesh);
 
 /**
  * Refreshes

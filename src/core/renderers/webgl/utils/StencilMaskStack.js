@@ -1,3 +1,5 @@
+var construct = require('../../../utils').construct;
+
 /**
  * Generic Mask Stack data structure
  * @class
@@ -27,5 +29,4 @@ function StencilMaskStack()
     this.count = 0;
 }
 
-StencilMaskStack.prototype.constructor = StencilMaskStack;
-module.exports = StencilMaskStack;
+module.exports = construct(StencilMaskStack);

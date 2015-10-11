@@ -31,9 +31,7 @@ function GraphicsRenderer(renderer)
     this.maximumSimplePolySize = 200;
 }
 
-GraphicsRenderer.prototype = Object.create(ObjectRenderer.prototype);
-GraphicsRenderer.prototype.constructor = GraphicsRenderer;
-module.exports = GraphicsRenderer;
+module.exports = utils.extend(GraphicsRenderer, ObjectRenderer);
 
 WebGLRenderer.registerPlugin('graphics', GraphicsRenderer);
 

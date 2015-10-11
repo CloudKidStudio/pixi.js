@@ -1,4 +1,5 @@
-var Shader = require('./Shader');
+var Shader = require('./Shader'),
+    utils = require('../../../utils');
 
 /**
  * This shader is used to draw complex primitive shapes for {@link PIXI.Graphics}.
@@ -55,6 +56,4 @@ function ComplexPrimitiveShader(shaderManager)
     );
 }
 
-ComplexPrimitiveShader.prototype = Object.create(Shader.prototype);
-ComplexPrimitiveShader.prototype.constructor = ComplexPrimitiveShader;
-module.exports = ComplexPrimitiveShader;
+module.exports = utils.extend(ComplexPrimitiveShader, Shader);

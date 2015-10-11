@@ -1,4 +1,5 @@
-var Point = require('./Point');
+var Point = require('./Point'),
+    construct = require('../utils').construct;
 
 /**
  * The pixi Matrix class as an object, which makes it a lot faster,
@@ -49,8 +50,7 @@ function Matrix()
     this.ty = 0;
 }
 
-Matrix.prototype.constructor = Matrix;
-module.exports = Matrix;
+module.exports = construct(Matrix);
 
 /**
  * Creates a Matrix object based on the given array. The Element to Matrix mapping order is as follows:

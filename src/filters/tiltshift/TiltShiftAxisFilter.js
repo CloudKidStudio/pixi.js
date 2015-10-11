@@ -35,9 +35,7 @@ function TiltShiftAxisFilter()
     this.updateDelta();
 }
 
-TiltShiftAxisFilter.prototype = Object.create(core.AbstractFilter.prototype);
-TiltShiftAxisFilter.prototype.constructor = TiltShiftAxisFilter;
-module.exports = TiltShiftAxisFilter;
+module.exports = core.utils.extend(TiltShiftAxisFilter, core.AbstractFilter);
 
 /**
  * Updates the filter delta values.

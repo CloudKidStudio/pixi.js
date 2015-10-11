@@ -1,5 +1,6 @@
 var AbstractFilter = require('./AbstractFilter'),
-    math =  require('../../../math');
+    math =  require('../../../math'),
+    utils = require('../../../utils');
 
 // @see https://github.com/substack/brfs/issues/25
 var fs = require('fs');
@@ -30,9 +31,7 @@ function SpriteMaskFilter(sprite)
     this.maskMatrix = maskMatrix;
 }
 
-SpriteMaskFilter.prototype = Object.create(AbstractFilter.prototype);
-SpriteMaskFilter.prototype.constructor = SpriteMaskFilter;
-module.exports = SpriteMaskFilter;
+module.exports = utils.extend(SpriteMaskFilter, AbstractFilter);
 
 /**
  * Applies the filter

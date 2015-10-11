@@ -18,9 +18,7 @@ function BlurFilter()
     this.blurYFilter = new BlurYFilter();
 }
 
-BlurFilter.prototype = Object.create(core.AbstractFilter.prototype);
-BlurFilter.prototype.constructor = BlurFilter;
-module.exports = BlurFilter;
+module.exports = core.utils.extend(BlurFilter, core.AbstractFilter);
 
 BlurFilter.prototype.applyFilter = function (renderer, input, output)
 {

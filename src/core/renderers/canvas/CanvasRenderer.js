@@ -99,10 +99,7 @@ function CanvasRenderer(width, height, options)
 }
 
 // constructor
-CanvasRenderer.prototype = Object.create(SystemRenderer.prototype);
-CanvasRenderer.prototype.constructor = CanvasRenderer;
-module.exports = CanvasRenderer;
-utils.pluginTarget.mixin(CanvasRenderer);
+module.exports = utils.extend(CanvasRenderer, SystemRenderer, true);
 
 /**
  * Renders the object to this canvas view

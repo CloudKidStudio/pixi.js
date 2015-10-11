@@ -1,4 +1,5 @@
-var Shader = require('./Shader');
+var Shader = require('./Shader'),
+    utils = require('../../../utils');
 
 /**
  * @class
@@ -61,9 +62,7 @@ function TextureShader(shaderManager, vertexSrc, fragmentSrc, customUniforms, cu
 }
 
 // constructor
-TextureShader.prototype = Object.create(Shader.prototype);
-TextureShader.prototype.constructor = TextureShader;
-module.exports = TextureShader;
+module.exports = utils.extend(TextureShader, Shader);
 
 /**
  * The default vertex shader source

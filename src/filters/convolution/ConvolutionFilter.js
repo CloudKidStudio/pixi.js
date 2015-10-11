@@ -31,9 +31,7 @@ function ConvolutionFilter(matrix, width, height)
     );
 }
 
-ConvolutionFilter.prototype = Object.create(core.AbstractFilter.prototype);
-ConvolutionFilter.prototype.constructor = ConvolutionFilter;
-module.exports = ConvolutionFilter;
+module.exports = core.utils.extend(ConvolutionFilter, core.AbstractFilter);
 
 Object.defineProperties(ConvolutionFilter.prototype, {
     /**

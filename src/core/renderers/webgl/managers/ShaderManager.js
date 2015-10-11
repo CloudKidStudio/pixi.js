@@ -54,11 +54,7 @@ function ShaderManager(renderer)
 //    this.initPlugins();
 }
 
-ShaderManager.prototype = Object.create(WebGLManager.prototype);
-ShaderManager.prototype.constructor = ShaderManager;
-utils.pluginTarget.mixin(ShaderManager);
-
-module.exports = ShaderManager;
+module.exports = utils.extend(ShaderManager, WebGLManager, true);
 
 /**
  * Called when there is a WebGL context change.

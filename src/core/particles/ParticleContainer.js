@@ -1,4 +1,5 @@
 var Container = require('../display/Container'),
+    utils = require('../utils')
     CONST = require('../const');
 
 /**
@@ -110,9 +111,7 @@ function ParticleContainer(maxSize, properties, batchSize)
     this.setProperties(properties);
 }
 
-ParticleContainer.prototype = Object.create(Container.prototype);
-ParticleContainer.prototype.constructor = ParticleContainer;
-module.exports = ParticleContainer;
+module.exports = utils.extend(ParticleContainer, Container);
 
 /**
  * Sets the private properties array to dynamic / static based on the passed properties object

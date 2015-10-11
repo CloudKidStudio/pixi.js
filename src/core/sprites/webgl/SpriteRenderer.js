@@ -1,5 +1,6 @@
 var ObjectRenderer = require('../../renderers/webgl/utils/ObjectRenderer'),
     WebGLRenderer = require('../../renderers/webgl/WebGLRenderer'),
+    utils = require('../../utils'),
     CONST = require('../../const');
 
 /**
@@ -115,9 +116,7 @@ function SpriteRenderer(renderer)
     this.shader = null;
 }
 
-SpriteRenderer.prototype = Object.create(ObjectRenderer.prototype);
-SpriteRenderer.prototype.constructor = SpriteRenderer;
-module.exports = SpriteRenderer;
+module.exports = utils.extend(SpriteRenderer, ObjectRenderer);
 
 WebGLRenderer.registerPlugin('sprite', SpriteRenderer);
 

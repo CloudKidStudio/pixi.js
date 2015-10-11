@@ -115,9 +115,7 @@ function BitmapText(text, style)
 }
 
 // constructor
-BitmapText.prototype = Object.create(core.Container.prototype);
-BitmapText.prototype.constructor = BitmapText;
-module.exports = BitmapText;
+module.exports = core.utils.extend(BitmapText, core.Container);
 
 Object.defineProperties(BitmapText.prototype, {
     /**

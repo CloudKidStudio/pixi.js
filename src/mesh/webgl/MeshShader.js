@@ -52,8 +52,6 @@ function MeshShader(shaderManager)
     );
 }
 
-MeshShader.prototype = Object.create(core.Shader.prototype);
-MeshShader.prototype.constructor = MeshShader;
-module.exports = MeshShader;
+module.exports = core.utils.extend(MeshShader, core.Shader);
 
 core.ShaderManager.registerPlugin('meshShader', MeshShader);

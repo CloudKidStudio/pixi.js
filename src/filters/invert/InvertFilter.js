@@ -23,9 +23,7 @@ function InvertFilter()
     );
 }
 
-InvertFilter.prototype = Object.create(core.AbstractFilter.prototype);
-InvertFilter.prototype.constructor = InvertFilter;
-module.exports = InvertFilter;
+module.exports = core.utils.extend(InvertFilter, core.AbstractFilter);
 
 Object.defineProperties(InvertFilter.prototype, {
     /**

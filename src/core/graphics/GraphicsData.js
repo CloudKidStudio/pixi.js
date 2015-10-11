@@ -1,3 +1,5 @@
+var construct = require('../utils').construct;
+
 /**
  * A GraphicsData object.
  *
@@ -62,8 +64,7 @@ function GraphicsData(lineWidth, lineColor, lineAlpha, fillColor, fillAlpha, fil
     this.type = shape.type;
 }
 
-GraphicsData.prototype.constructor = GraphicsData;
-module.exports = GraphicsData;
+module.exports = construct(GraphicsData);
 
 /**
  * Creates a new GraphicsData object with the same values as this one.

@@ -5,6 +5,7 @@ var BaseTexture = require('./BaseTexture'),
     CanvasBuffer = require('../renderers/canvas/utils/CanvasBuffer'),
     math = require('../math'),
     CONST = require('../const'),
+    utils = require('../utils'),
     tempMatrix = new math.Matrix();
 
 /**
@@ -159,9 +160,7 @@ function RenderTexture(renderer, width, height, scaleMode, resolution)
     this._updateUvs();
 }
 
-RenderTexture.prototype = Object.create(Texture.prototype);
-RenderTexture.prototype.constructor = RenderTexture;
-module.exports = RenderTexture;
+module.exports = utils.extend(RenderTexture, Texture);
 
 /**
  * Resizes the RenderTexture.

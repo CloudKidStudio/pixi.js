@@ -28,9 +28,7 @@ function NoiseFilter()
     );
 }
 
-NoiseFilter.prototype = Object.create(core.AbstractFilter.prototype);
-NoiseFilter.prototype.constructor = NoiseFilter;
-module.exports = NoiseFilter;
+module.exports = core.utils.extend(NoiseFilter, core.AbstractFilter);
 
 Object.defineProperties(NoiseFilter.prototype, {
     /**

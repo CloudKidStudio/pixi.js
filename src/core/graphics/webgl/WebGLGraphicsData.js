@@ -1,3 +1,5 @@
+var construct = require('../../utils').construct;
+
 /**
  * An object containing WebGL specific properties to be used by the WebGL renderer
  *
@@ -67,8 +69,7 @@ function WebGLGraphicsData(gl) {
     this.glIndices = null;
 }
 
-WebGLGraphicsData.prototype.constructor = WebGLGraphicsData;
-module.exports = WebGLGraphicsData;
+module.exports = construct(WebGLGraphicsData);
 
 /**
  * Resets the vertices and the indices

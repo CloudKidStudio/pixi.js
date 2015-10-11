@@ -1,4 +1,5 @@
-var TextureShader = require('../../renderers/webgl/shaders/TextureShader');
+var TextureShader = require('../../renderers/webgl/shaders/TextureShader'),
+    utils = require('../../utils');
 
 /**
  * @class
@@ -70,7 +71,4 @@ function ParticleShader(shaderManager)
 
 }
 
-ParticleShader.prototype = Object.create(TextureShader.prototype);
-ParticleShader.prototype.constructor = ParticleShader;
-
-module.exports = ParticleShader;
+module.exports = utils.extend(ParticleShader, TextureShader);

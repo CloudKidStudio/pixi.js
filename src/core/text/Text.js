@@ -85,9 +85,7 @@ function Text(text, style, resolution)
 }
 
 // constructor
-Text.prototype = Object.create(Sprite.prototype);
-Text.prototype.constructor = Text;
-module.exports = Text;
+module.exports = utils.extend(Text, Sprite);
 
 Text.fontPropertiesCache = {};
 Text.fontPropertiesCanvas = document.createElement('canvas');

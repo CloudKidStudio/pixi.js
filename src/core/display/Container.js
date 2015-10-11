@@ -1,4 +1,5 @@
 var math = require('../math'),
+    utils = require('../utils'),
     DisplayObject = require('./DisplayObject'),
     RenderTexture = require('../textures/RenderTexture'),
     _tempMatrix = new math.Matrix();
@@ -29,9 +30,7 @@ function Container()
 }
 
 // constructor
-Container.prototype = Object.create(DisplayObject.prototype);
-Container.prototype.constructor = Container;
-module.exports = Container;
+module.exports = utils.extend(Container, DisplayObject);
 
 Object.defineProperties(Container.prototype, {
     /**

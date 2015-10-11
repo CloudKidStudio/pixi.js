@@ -27,9 +27,7 @@ function ShockwaveFilter()
     );
 }
 
-ShockwaveFilter.prototype = Object.create(core.AbstractFilter.prototype);
-ShockwaveFilter.prototype.constructor = ShockwaveFilter;
-module.exports = ShockwaveFilter;
+module.exports = core.utils.extend(ShockwaveFilter, core.AbstractFilter);
 
 Object.defineProperties(ShockwaveFilter.prototype, {
     /**

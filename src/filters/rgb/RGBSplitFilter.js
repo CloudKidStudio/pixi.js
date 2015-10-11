@@ -26,9 +26,7 @@ function RGBSplitFilter()
     );
 }
 
-RGBSplitFilter.prototype = Object.create(core.AbstractFilter.prototype);
-RGBSplitFilter.prototype.constructor = RGBSplitFilter;
-module.exports = RGBSplitFilter;
+module.exports = core.utils.extend(RGBSplitFilter, core.AbstractFilter);
 
 Object.defineProperties(RGBSplitFilter.prototype, {
     /**

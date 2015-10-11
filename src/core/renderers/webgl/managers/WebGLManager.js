@@ -1,3 +1,5 @@
+var construct = require('../../../utils').construct;
+
 /**
  * @class
  * @memberof PIXI
@@ -15,8 +17,7 @@ function WebGLManager(renderer)
     this.renderer.on('context', this.onContextChange, this);
 }
 
-WebGLManager.prototype.constructor = WebGLManager;
-module.exports = WebGLManager;
+module.exports = construct(WebGLManager);
 
 /**
  * Generic method called when there is a WebGL context change.

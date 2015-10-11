@@ -31,9 +31,7 @@ function BlurYTintFilter()
     this.strength = 4;
 }
 
-BlurYTintFilter.prototype = Object.create(core.AbstractFilter.prototype);
-BlurYTintFilter.prototype.constructor = BlurYTintFilter;
-module.exports = BlurYTintFilter;
+module.exports = core.utils.extend(BlurYTintFilter, core.AbstractFilter);
 
 BlurYTintFilter.prototype.applyFilter = function (renderer, input, output, clear)
 {
