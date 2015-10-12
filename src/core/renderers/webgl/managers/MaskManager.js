@@ -1,5 +1,4 @@
 var WebGLManager = require('./WebGLManager'),
-    utils = require('../../../utils'),
     AlphaMaskFilter = require('../filters/SpriteMaskFilter');
 
 /**
@@ -18,7 +17,7 @@ function MaskManager(renderer)
     this.alphaMaskPool = [];
 }
 
-module.exports = utils.extend(MaskManager, WebGLManager);
+module.exports = WebGLManager.extend(MaskManager);
 
 /**
  * Applies the Mask and adds it to the current filter stack.

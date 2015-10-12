@@ -1,4 +1,4 @@
-var construct = require('../../../utils').construct;
+var utils = require('../../../utils');
 
 /**
  * Generic Mask Stack data structure
@@ -29,4 +29,4 @@ function StencilMaskStack()
     this.count = 0;
 }
 
-module.exports = construct(StencilMaskStack);
+module.exports = utils.extendable(StencilMaskStack);

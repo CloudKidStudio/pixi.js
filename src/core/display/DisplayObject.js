@@ -142,7 +142,7 @@ function DisplayObject()
 }
 
 // constructor
-module.exports = utils.extend(DisplayObject, EventEmitter);
+module.exports = utils.extendable(DisplayObject, EventEmitter);
 
 Object.defineProperties(DisplayObject.prototype, {
     /**

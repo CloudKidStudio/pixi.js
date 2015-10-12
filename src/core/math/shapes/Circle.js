@@ -1,5 +1,5 @@
 var Rectangle = require('./Rectangle'),
-    construct = require('../../utils').construct,
+    utils = require('../../utils'),
     CONST = require('../../const');
 
 /**
@@ -39,7 +39,7 @@ function Circle(x, y, radius)
     this.type = CONST.SHAPES.CIRC;
 }
 
-module.exports = construct(Circle);
+module.exports = utils.extendable(Circle);
 
 /**
  * Creates a clone of this Circle instance

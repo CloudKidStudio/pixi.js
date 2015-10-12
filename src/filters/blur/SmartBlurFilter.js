@@ -23,4 +23,4 @@ function SmartBlurFilter()
     );
 }
 
-module.exports = core.utils.extend(SmartBlurFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(SmartBlurFilter);

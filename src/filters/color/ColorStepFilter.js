@@ -23,7 +23,7 @@ function ColorStepFilter()
     );
 }
 
-module.exports = core.utils.extend(ColorStepFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(ColorStepFilter);
 
 Object.defineProperties(ColorStepFilter.prototype, {
     /**

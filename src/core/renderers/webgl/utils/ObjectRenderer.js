@@ -1,5 +1,4 @@
-var WebGLManager = require('../managers/WebGLManager'),
-	utils = require('../../../utils');
+var WebGLManager = require('../managers/WebGLManager');
 
 /**
  * Base for a common object renderer that can be used as a system renderer plugin.
@@ -14,7 +13,7 @@ function ObjectRenderer(renderer)
     WebGLManager.call(this, renderer);
 }
 
-module.exports = utils.extend(ObjectRenderer, WebGLManager);
+module.exports = WebGLManager.extend(ObjectRenderer);
 
 /**
  * Starts the renderer and sets the shader

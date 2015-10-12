@@ -38,7 +38,7 @@ function ColorMatrixFilter()
     );
 }
 
-module.exports = core.utils.extend(ColorMatrixFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(ColorMatrixFilter);
 
 /**
  * Transforms current matrix and set the new one

@@ -2,7 +2,6 @@ var WebGLManager = require('./WebGLManager'),
     RenderTarget = require('../utils/RenderTarget'),
     CONST = require('../../../const'),
     Quad = require('../utils/Quad'),
-    utils = require('../../../utils'),
     math =  require('../../../math');
 
 /**
@@ -49,7 +48,7 @@ function FilterManager(renderer)
     this.currentFrame = null;
 }
 
-module.exports = utils.extend(FilterManager, WebGLManager);
+module.exports = WebGLManager.extend(FilterManager);
 
 
 /**

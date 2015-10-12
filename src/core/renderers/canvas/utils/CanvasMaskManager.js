@@ -1,5 +1,5 @@
 var CanvasGraphics = require('./CanvasGraphics'),
-    construct = require('../../../utils').construct;
+    utils = require('../../../utils');
 
 /**
  * A set of functions used to handle masking.
@@ -10,7 +10,7 @@ var CanvasGraphics = require('./CanvasGraphics'),
 function CanvasMaskManager()
 {}
 
-module.exports = construct(CanvasMaskManager);
+module.exports = utils.extendable(CanvasMaskManager);
 
 /**
  * This method adds it to the current stack of masks.

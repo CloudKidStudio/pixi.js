@@ -26,7 +26,7 @@ function RGBSplitFilter()
     );
 }
 
-module.exports = core.utils.extend(RGBSplitFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(RGBSplitFilter);
 
 Object.defineProperties(RGBSplitFilter.prototype, {
     /**

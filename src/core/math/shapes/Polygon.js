@@ -1,5 +1,5 @@
 var Point = require('../Point'),
-    construct = require('../../utils').construct,
+    utils = require('../../utils'),
     CONST = require('../../const');
 
 /**
@@ -58,7 +58,7 @@ function Polygon(points_)
     this.type = CONST.SHAPES.POLY;
 }
 
-module.exports = construct(Polygon);
+module.exports = utils.extendable(Polygon);
 
 /**
  * Creates a clone of this polygon

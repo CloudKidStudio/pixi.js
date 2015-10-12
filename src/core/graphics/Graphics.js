@@ -4,7 +4,6 @@ var Container = require('../display/Container'),
     CanvasGraphics = require('../renderers/canvas/utils/CanvasGraphics'),
     GraphicsData = require('./GraphicsData'),
     math = require('../math'),
-    utils = require('../utils'),
     CONST = require('../const'),
     tempPoint = new math.Point();
 
@@ -160,7 +159,7 @@ function Graphics()
 }
 
 // constructor
-module.exports = utils.extend(Graphics, Container);
+module.exports = Container.extend(Graphics);
 
 /**
  * Creates a new Graphics object with the same values as this one.

@@ -23,7 +23,7 @@ function SepiaFilter()
     );
 }
 
-module.exports = core.utils.extend(SepiaFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(SepiaFilter);
 
 Object.defineProperties(SepiaFilter.prototype, {
     /**

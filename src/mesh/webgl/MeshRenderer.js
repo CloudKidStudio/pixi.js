@@ -44,7 +44,7 @@ function MeshRenderer(renderer)
     }
 }
 
-module.exports = core.utils.extend(MeshRenderer, core.ObjectRenderer);
+module.exports = core.ObjectRenderer.extend(MeshRenderer);
 
 core.WebGLRenderer.registerPlugin('mesh', MeshRenderer);
 

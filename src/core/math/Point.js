@@ -1,4 +1,4 @@
-var construct = require('../utils').construct;
+var utils = require('../utils');
 
 /**
  * The Point object represents a location in a two-dimensional coordinate system, where x represents
@@ -24,7 +24,7 @@ function Point(x, y)
     this.y = y || 0;
 }
 
-module.exports = construct(Point);
+module.exports = utils.extendable(Point);
 
 /**
  * Creates a clone of this point

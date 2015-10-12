@@ -1,5 +1,4 @@
-var AbstractFilter = require('./AbstractFilter'),
-    utils = require('../../../utils');
+var AbstractFilter = require('./AbstractFilter');
 // @see https://github.com/substack/brfs/issues/25
 var fs = require('fs');
 
@@ -33,7 +32,7 @@ function FXAAFilter()
 
 }
 
-module.exports = utils.extend(FXAAFilter, AbstractFilter);
+module.exports = AbstractFilter.extend(FXAAFilter);
 
 /**
  * Applies the filter

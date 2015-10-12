@@ -70,7 +70,7 @@ function VideoBaseTexture(source, scaleMode)
     this.__loaded = false;
 }
 
-module.exports = utils.extend(VideoBaseTexture, BaseTexture);
+module.exports = BaseTexture.extend(VideoBaseTexture);
 
 /**
  * The internal update loop of the video base texture, only runs when autoUpdate is set to true

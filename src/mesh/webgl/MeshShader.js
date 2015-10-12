@@ -52,6 +52,6 @@ function MeshShader(shaderManager)
     );
 }
 
-module.exports = core.utils.extend(MeshShader, core.Shader);
+module.exports = core.Shader.extend(MeshShader);
 
 core.ShaderManager.registerPlugin('meshShader', MeshShader);

@@ -1,5 +1,5 @@
 var Rectangle = require('./Rectangle'),
-    construct = require('../../utils').construct,
+    utils = require('../../utils'),
     CONST = require('../../const');
 
 /**
@@ -46,7 +46,7 @@ function Ellipse(x, y, width, height)
     this.type = CONST.SHAPES.ELIP;
 }
 
-module.exports = construct(Ellipse);
+module.exports = utils.extendable(Ellipse);
 
 /**
  * Creates a clone of this Ellipse instance

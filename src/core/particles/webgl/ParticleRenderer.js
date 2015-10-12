@@ -2,7 +2,6 @@ var ObjectRenderer = require('../../renderers/webgl/utils/ObjectRenderer'),
     WebGLRenderer  = require('../../renderers/webgl/WebGLRenderer'),
     ParticleShader = require('./ParticleShader'),
     ParticleBuffer = require('./ParticleBuffer'),
-    extend         = require('../../utils').extend,
     math           = require('../../math');
 
 /**
@@ -64,7 +63,7 @@ function ParticleRenderer(renderer)
     this.tempMatrix = new math.Matrix();
 }
 
-module.exports = extend(ParticleRenderer, ObjectRenderer);
+module.exports = ObjectRenderer.extend(ParticleRenderer);
 
 WebGLRenderer.registerPlugin('particle', ParticleRenderer);
 

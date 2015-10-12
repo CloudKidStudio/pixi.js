@@ -12,7 +12,7 @@ function WebGLMaskManager(renderer)
     this.stencilMaskStack = null;
 }
 
-module.exports = utils.extend(WebGLMaskManager, WebGLManager);
+module.exports = WebGLManager.extend(WebGLMaskManager);
 
 /**
  * Changes the mask stack that is used by this manager.

@@ -27,7 +27,7 @@ function ShockwaveFilter()
     );
 }
 
-module.exports = core.utils.extend(ShockwaveFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(ShockwaveFilter);
 
 Object.defineProperties(ShockwaveFilter.prototype, {
     /**

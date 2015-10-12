@@ -1,5 +1,5 @@
 var DefaultShader = require('../shaders/TextureShader'),
-    construct = require('../../../utils').construct;
+    utils = require('../../../utils');
 
 /**
  * This is the base class for creating a PIXI filter. Currently only WebGL supports filters.
@@ -54,7 +54,7 @@ function AbstractFilter(vertexSrc, fragmentSrc, uniforms)
 
 }
 
-module.exports = construct(AbstractFilter);
+module.exports = utils.extendable(AbstractFilter);
 
 /**
  * Grabs a shader from the current renderer

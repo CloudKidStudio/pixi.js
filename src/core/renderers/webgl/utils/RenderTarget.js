@@ -165,7 +165,7 @@ var RenderTarget = function(gl, width, height, scaleMode, resolution, root)
     this.resize(width, height);
 };
 
-module.exports = utils.construct(RenderTarget);
+module.exports = utils.extendable(RenderTarget);
 
 /**
  * Clears the filter texture.

@@ -30,7 +30,7 @@ function InteractionData()
     this.originalEvent = null;
 }
 
-module.exports = core.utils.construct(InteractionData);
+module.exports = core.utils.extendable(InteractionData);
 
 /**
  * This will return the local coordinates of the specified displayObject for this InteractionData

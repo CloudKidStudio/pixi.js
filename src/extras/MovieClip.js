@@ -81,7 +81,7 @@ function MovieClip(textures)
 }
 
 // constructor
-module.exports = core.utils.extend(MovieClip, core.Sprite);
+module.exports = core.Sprite.extend(MovieClip);
 
 Object.defineProperties(MovieClip.prototype, {
     /**

@@ -176,7 +176,7 @@ function SystemRenderer(system, width, height, options)
 }
 
 // constructor
-module.exports = utils.extend(SystemRenderer, EventEmitter);
+module.exports = utils.extendable(SystemRenderer, EventEmitter);
 
 Object.defineProperties(SystemRenderer.prototype, {
     /**

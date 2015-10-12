@@ -1,8 +1,7 @@
 var WebGLManager = require('./WebGLManager'),
     TextureShader = require('../shaders/TextureShader'),
     ComplexPrimitiveShader = require('../shaders/ComplexPrimitiveShader'),
-    PrimitiveShader = require('../shaders/PrimitiveShader'),
-    utils = require('../../../utils');
+    PrimitiveShader = require('../shaders/PrimitiveShader');
 
 /**
  * @class
@@ -54,7 +53,7 @@ function ShaderManager(renderer)
 //    this.initPlugins();
 }
 
-module.exports = utils.extend(ShaderManager, WebGLManager, true);
+module.exports = WebGLManager.extend(ShaderManager, true);
 
 /**
  * Called when there is a WebGL context change.

@@ -1,5 +1,4 @@
-var TextureShader = require('../../renderers/webgl/shaders/TextureShader'),
-    utils = require('../../utils');
+var TextureShader = require('../../renderers/webgl/shaders/TextureShader');
 
 /**
  * @class
@@ -71,4 +70,4 @@ function ParticleShader(shaderManager)
 
 }
 
-module.exports = utils.extend(ParticleShader, TextureShader);
+module.exports = TextureShader.extend(ParticleShader);

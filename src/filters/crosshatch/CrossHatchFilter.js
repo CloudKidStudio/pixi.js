@@ -19,4 +19,4 @@ function CrossHatchFilter()
     );
 }
 
-module.exports = core.utils.extend(CrossHatchFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(CrossHatchFilter);

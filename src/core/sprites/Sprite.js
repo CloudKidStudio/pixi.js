@@ -95,7 +95,7 @@ function Sprite(texture)
 }
 
 // constructor
-module.exports = utils.extend(Sprite, Container);
+module.exports = Container.extend(Sprite);
 
 Object.defineProperties(Sprite.prototype, {
     /**

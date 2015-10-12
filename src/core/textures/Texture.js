@@ -146,7 +146,7 @@ function Texture(baseTexture, frame, crop, trim, rotate)
      */
 }
 
-module.exports = utils.extend(Texture, EventEmitter);
+module.exports = utils.extendable(Texture, EventEmitter);
 
 Object.defineProperties(Texture.prototype, {
     /**

@@ -1,4 +1,4 @@
-var construct = require('../../../utils').construct;
+var utils = require('../../../utils');
 
 /**
  * @class
@@ -17,7 +17,7 @@ function WebGLManager(renderer)
     this.renderer.on('context', this.onContextChange, this);
 }
 
-module.exports = construct(WebGLManager);
+module.exports = utils.extendable(WebGLManager);
 
 /**
  * Generic method called when there is a WebGL context change.

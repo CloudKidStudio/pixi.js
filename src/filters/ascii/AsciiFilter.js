@@ -31,7 +31,7 @@ function AsciiFilter()
     );
 }
 
-module.exports = core.utils.extend(AsciiFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(AsciiFilter);
 
 Object.defineProperties(AsciiFilter.prototype, {
     /**

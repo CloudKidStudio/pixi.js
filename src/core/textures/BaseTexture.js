@@ -160,7 +160,7 @@ function BaseTexture(source, scaleMode, resolution)
      */
 }
 
-module.exports = utils.extend(BaseTexture, EventEmitter);
+module.exports = utils.extendable(BaseTexture, EventEmitter);
 
 /**
  * Updates the texture on all the webgl renderers, this also assumes the src has changed.

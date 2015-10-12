@@ -29,7 +29,7 @@ function DropShadowFilter()
     this.blendMode = core.BLEND_MODES.MULTIPLY;
 }
 
-module.exports = core.utils.extend(DropShadowFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(DropShadowFilter);
 
 DropShadowFilter.prototype.applyFilter = function (renderer, input, output)
 {

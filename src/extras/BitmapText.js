@@ -115,7 +115,7 @@ function BitmapText(text, style)
 }
 
 // constructor
-module.exports = core.utils.extend(BitmapText, core.Container);
+module.exports = core.Container.extend(BitmapText);
 
 Object.defineProperties(BitmapText.prototype, {
     /**

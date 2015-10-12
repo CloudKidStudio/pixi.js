@@ -160,7 +160,7 @@ function WebGLRenderer(width, height, options)
 }
 
 // constructor
-module.exports = utils.extend(WebGLRenderer, SystemRenderer, true);
+module.exports = SystemRenderer.extend(WebGLRenderer, true);
 
 WebGLRenderer.glContextId = 0;
 

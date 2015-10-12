@@ -18,7 +18,7 @@ function BlurFilter()
     this.blurYFilter = new BlurYFilter();
 }
 
-module.exports = core.utils.extend(BlurFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(BlurFilter);
 
 BlurFilter.prototype.applyFilter = function (renderer, input, output)
 {

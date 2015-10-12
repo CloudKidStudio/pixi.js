@@ -1,4 +1,4 @@
-var construct = require('../../utils').construct;
+var utils = require('../../utils');
 
 /**
  * @author Mat Groves
@@ -88,7 +88,7 @@ function ParticleBuffer(gl, properties, dynamicPropertyFlags, size)
 
 }
 
-module.exports = construct(ParticleBuffer);
+module.exports = utils.extendable(ParticleBuffer);
 
 /**
  * Sets up the renderer context and necessary buffers.

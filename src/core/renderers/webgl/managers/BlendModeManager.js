@@ -1,5 +1,4 @@
-var WebGLManager = require('./WebGLManager'),
-    utils = require('../../../utils');
+var WebGLManager = require('./WebGLManager');
 
 /**
  * @class
@@ -17,7 +16,7 @@ function BlendModeManager(renderer)
     this.currentBlendMode = 99999;
 }
 
-module.exports = utils.extend(BlendModeManager, WebGLManager);
+module.exports = WebGLManager.extend(BlendModeManager);
 
 /**
  * Sets-up the given blendMode from WebGL's point of view.

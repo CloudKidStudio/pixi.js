@@ -87,7 +87,7 @@ function Mesh(texture, vertices, uvs, indices, drawMode)
 }
 
 // constructor
-module.exports = core.utils.extend(Mesh, core.Container);
+module.exports = core.Container.extend(Mesh);
 
 Object.defineProperties(Mesh.prototype, {
     /**

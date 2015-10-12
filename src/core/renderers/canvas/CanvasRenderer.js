@@ -99,7 +99,7 @@ function CanvasRenderer(width, height, options)
 }
 
 // constructor
-module.exports = utils.extend(CanvasRenderer, SystemRenderer, true);
+module.exports = SystemRenderer.extend(CanvasRenderer, true);
 
 /**
  * Renders the object to this canvas view

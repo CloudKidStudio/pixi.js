@@ -60,7 +60,7 @@ function Rope(texture, points)
 }
 
 // constructor
-module.exports = core.utils.extend(Rope, Mesh);
+module.exports = Mesh.extend(Rope);
 
 /**
  * Refreshes

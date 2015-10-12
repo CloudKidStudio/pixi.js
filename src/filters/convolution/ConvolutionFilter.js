@@ -31,7 +31,7 @@ function ConvolutionFilter(matrix, width, height)
     );
 }
 
-module.exports = core.utils.extend(ConvolutionFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(ConvolutionFilter);
 
 Object.defineProperties(ConvolutionFilter.prototype, {
     /**

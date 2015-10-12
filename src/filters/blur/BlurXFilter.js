@@ -33,7 +33,7 @@ function BlurXFilter()
     this.strength = 4;
 }
 
-module.exports = core.utils.extend(BlurXFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(BlurXFilter);
 
 BlurXFilter.prototype.applyFilter = function (renderer, input, output, clear)
 {

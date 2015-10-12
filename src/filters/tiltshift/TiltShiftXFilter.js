@@ -1,5 +1,4 @@
-var TiltShiftAxisFilter = require('./TiltShiftAxisFilter'),
-	utils = require('../../core/utils');
+var TiltShiftAxisFilter = require('./TiltShiftAxisFilter');
 
 /**
  * @author Vico @vicocotea
@@ -18,7 +17,7 @@ function TiltShiftXFilter()
     TiltShiftAxisFilter.call(this);
 }
 
-module.exports = utils.extend(TiltShiftXFilter, TiltShiftAxisFilter);
+module.exports = TiltShiftAxisFilter.extend(TiltShiftXFilter);
 
 /**
  * Updates the filter delta values.

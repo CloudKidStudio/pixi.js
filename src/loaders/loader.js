@@ -35,7 +35,7 @@ function Loader(baseUrl, concurrency)
     }
 }
 
-module.exports = utils.extend(Loader, ResourceLoader);
+module.exports = utils.extendable(Loader, ResourceLoader);
 
 Loader._pixiMiddleware = [
     // parse any blob into more usable objects (e.g. Image)

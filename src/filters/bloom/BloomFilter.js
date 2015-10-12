@@ -20,7 +20,7 @@ function BloomFilter()
     this.defaultFilter = new core.AbstractFilter();
 }
 
-module.exports = core.utils.extend(BloomFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(BloomFilter);
 
 BloomFilter.prototype.applyFilter = function (renderer, input, output)
 {

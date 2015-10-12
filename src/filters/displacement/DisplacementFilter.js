@@ -41,7 +41,7 @@ function DisplacementFilter(sprite, scale)
     this.scale = new core.Point(scale, scale);
 }
 
-module.exports = core.utils.extend(DisplacementFilter, core.AbstractFilter);
+module.exports = core.AbstractFilter.extend(DisplacementFilter);
 
 DisplacementFilter.prototype.applyFilter = function (renderer, input, output)
 {

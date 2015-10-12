@@ -82,7 +82,7 @@ function Shader(shaderManager, vertexSrc, fragmentSrc, uniforms, attributes)
     this.init();
 }
 
-module.exports = utils.construct(Shader);
+module.exports = utils.extendable(Shader);
 
 /**
  * Creates the shader and uses it
