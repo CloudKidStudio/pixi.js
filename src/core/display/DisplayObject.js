@@ -39,6 +39,13 @@ function DisplayObject()
     this.pivot = new math.Point(0, 0);
 
     /**
+     * The skew values of the displayObject.
+     *
+     * @member {PIXI.Point}
+     */
+    this.skew = new math.Point(0, 0);
+
+    /**
      * The rotation of the object in radians.
      *
      * @member {number}
@@ -427,6 +434,33 @@ DisplayObject.prototype.generateTexture = function (renderer, scaleMode, resolut
     renderTexture.render(this, _tempMatrix);
 
     return renderTexture;
+};
+
+/**
+ * Convenience function to set the postion, scale, skew and pivot at once.
+ *
+ * @param x {number} The X position
+ * @param y {number} The Y position
+ * @param scaleX {number} The X scale value
+ * @param scaleY {number} The Y scale value
+ * @param skewX {number} The X skew value
+ * @param skewY {number} The Y skew value
+ * @param pivotX {number} The X pivot value
+ * @param pivotY {number} The Y pivot value
+ * @return {PIXI.DisplayObject}
+ */
+DisplayObject.prototype.setTransform = function(x, y, scaleX, scaleY, rotation, skewX, skewY, pivotX, pivotY)
+{
+    this.position.x = x || 0;
+    this.position.y = y || 0;
+    this.scale.x = !scaleX ? 1 : scaleX;
+    this.scale.y = !scaleY ? 1 : scaleY;
+    this.rotation = rotation || 0; 
+    this.skew.x = skewX || 0;
+    this.skew.y = skewY || 0;
+    this.pivot.x = pivotX || 0;
+    this.pivot.y = pivotY || 0;
+    return this;
 };
 
 /**

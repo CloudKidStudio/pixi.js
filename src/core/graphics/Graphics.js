@@ -227,7 +227,6 @@ Graphics.prototype.lineStyle = function (lineWidth, color, alpha)
             this.currentPath.lineAlpha = this.lineAlpha;
         }
     }
-
     return this;
 };
 
