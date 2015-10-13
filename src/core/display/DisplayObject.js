@@ -486,7 +486,7 @@ DisplayObject.prototype.setParent = function (container)
  */
 DisplayObject.prototype.destroy = function ()
 {
-
+    this.skew = null;
     this.position = null;
     this.scale = null;
     this.pivot = null;
