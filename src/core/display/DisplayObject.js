@@ -49,13 +49,6 @@ function DisplayObject()
     this.skew = new math.Point(0, 0);
 
     /**
-     * The skew values of the displayObject.
-     *
-     * @member {PIXI.Point}
-     */
-    this.skew = new math.Point(0, 0);
-
-    /**
      * The rotation of the object in radians.
      *
      * @member {number}
